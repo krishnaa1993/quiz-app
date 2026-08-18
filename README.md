@@ -32,6 +32,7 @@ quiz-app/
 ├── style.css
 ├── script.js
 └── README.md
+```
 
 ## How to Run
 
