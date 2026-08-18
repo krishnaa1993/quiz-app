@@ -39,6 +39,7 @@ nextButton.addEventListener("click", () => {
     questionHeading.textContent = questions[currentQuestion].question;
     ans.textContent = "";
     resultHeading.textContent = "";
+    nextButton.disabled = true;
     showOptions();
   }
 });
@@ -51,9 +52,11 @@ function showOptions() {
     button.addEventListener("click", () => {
       if (opt === questions[currentQuestion].correctAnswer) {
         resultHeading.textContent = "Correct";
+        resultHeading.style.color = "green";
         score++;
       } else {
         resultHeading.textContent = "Wrong";
+        resultHeading.style.color = "red";
       }
       document.querySelectorAll(".answer button").forEach((button) => {
         button.disabled = true;
