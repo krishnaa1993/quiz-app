@@ -33,12 +33,14 @@ quiz-app/
 ├── script.js
 └── README.md
 
-How to Run
-Clone the repository and open index.html in your browser.
+## How to Run
 
-Future Improvements
-Add more questions
-Add a timer
-Add different quiz categories
-Add a restart button
-Improve animations and UI
+Clone the repository and open `index.html` in your browser.
+
+## Future Improvements
+
+- Add more questions
+- Add a timer
+- Add different quiz categories
+- Add a restart button
+- Improve animations and UI
