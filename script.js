@@ -20,13 +20,14 @@ const questions = [
 
 const questionHeading = document.querySelector(".question h2");
 const resultHeading = document.querySelector(".result h2");
-questionHeading.textContent = questions[currentQuestion].question;
 
 const ans = document.querySelector(".answer");
 const questionContainer = document.querySelector(".question");
 
 const nextButton = document.querySelector(".next-button button");
 nextButton.disabled = true;
+showQuestion();
+
 nextButton.addEventListener("click", () => {
   currentQuestion++;
 
@@ -36,7 +37,7 @@ nextButton.addEventListener("click", () => {
     questionContainer.style.display = "none";
     ans.style.display = "none";
   } else {
-    questionHeading.textContent = questions[currentQuestion].question;
+    showQuestion();
     ans.textContent = "";
     resultHeading.textContent = "";
     nextButton.disabled = true;
@@ -66,3 +67,7 @@ function showOptions() {
   });
 }
 showOptions();
+
+function showQuestion() {
+  questionHeading.textContent = questions[currentQuestion].question;
+}
